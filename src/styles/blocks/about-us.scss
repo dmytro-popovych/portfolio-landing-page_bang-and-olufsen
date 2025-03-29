@@ -1,0 +1,92 @@
+.about-us {
+  margin: 0 $mobile-horizontal-indents * -1;
+  background-color: #fcfaef;
+
+  @include on-tablet {
+    margin: 0 $tablet-horizontal-indents * -1;
+  }
+
+  @include on-desktop {
+    margin: 0 $desktop-horizontal-indents * -1;
+  }
+
+  &__image {
+    grid-column: 1 / -1;
+    margin-bottom: 48px;
+    height: 200px;
+    background-image: url(../images/main-about/main-about-image.avif);
+    background-size: cover;
+    background-position: center;
+
+    @include on-tablet {
+      margin-bottom: 120px;
+      height: 400px;
+    }
+
+    @include on-desktop {
+      height: 460px;
+    }
+  }
+
+  &__content {
+    @include page-grid;
+
+    margin: 0 $mobile-horizontal-indents;
+
+    @include on-tablet {
+      margin: 0 $tablet-horizontal-indents;
+    }
+
+    @include on-desktop {
+      margin: 0 $desktop-horizontal-indents;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    margin-bottom: 24px;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+      margin-bottom: 0;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 7;
+    }
+
+    &--phrase-1 {
+      @include on-tablet {
+        display: block;
+      }
+
+      @include on-desktop {
+        display: inline;
+      }
+    }
+
+    &--phrase-2 {
+      @media (max-width: $mobile-max-width) {
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    grid-column: 1 / -1;
+    margin: 0 0 48px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+      margin-bottom: 120px;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / -1;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.form {
+  display: grid;
+
+  &__field {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    height: 48px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    color: inherit;
+    background-color: #f9f9f9;
+    border: 1px solid transparent;
+    border-radius: $button-field-radius;
+    outline: none;
+    transition:
+      border-color $effect-duration,
+      color $effect-duration;
+
+    &--textarea {
+      padding: 14px 16px;
+      height: 148px;
+      resize: none;
+    }
+
+    &::placeholder {
+      color: #7e7e83;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      border-color: #dbdbdb;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+
+    &:focus {
+      border: 2px solid $primary-button;
+    }
+  }
+}
